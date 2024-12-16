@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Task Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>My Daily Routine</h1>
+
+        <!-- Task Input Section -->
+        <section class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            
+            <!-- Priority Dropdown -->
+            <select id="priorityInput"; color="red">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            
+            <!-- Category Dropdown -->
+            <select id="categoryInput">
+                <option value="teaching">Teaching</option>
+                <option value="assignment">Assignment</option>
+                <option value="meeting">Meeting</option>
+                <option value="grading">Grading</option>
+                <option value="personal">Personal</option>
+            </select>
+
+            <button onclick="addTask()">Add Task</button>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="task-filters">
+            <h3>Filter Tasks</h3>
+            <select id="filterPriority"; border-color="yellow";>
+                <option value="all">All Priorities</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <select id="filterCategory">
+                <option value="all">All Categories</option>
+                <option value="teaching">Teaching</option>
+                <option value="assignment">Assignment</option>
+                <option value="meeting">Meeting</option>
+                <option value="grading">Grading</option>
+                <option value="personal">Personal</option>
+            </select>
+
+            <button onclick="filterTasks()">Filter Tasks</button>
+        </section>
+
+        <!-- Task List Section -->
+        <ul id="taskList"></ul>
+
+        <!-- Progress Bar Section -->
+        <div id="progressBarContainer">
+            <div id="progressBar"></div>
+        </div>
+        <p id="progressText"></p>
+    </div>
+    <h2>My Partner in Progress Daily Tasks</h2>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
